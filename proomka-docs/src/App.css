@@ -31,3 +31,18 @@ body {
   overflow-x: hidden;
   transition: all 0.3s ease;
 }
+
+@media (max-width: 1280px) {
+  .App {
+    background-image: unset;
+  }
+}
+
+.normal {
+  text-decoration: none;
+  color: unset;
+}
+
+* {
+  transition: 250ms;
+}

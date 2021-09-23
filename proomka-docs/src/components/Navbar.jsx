@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink, Link } from "react-router-dom";
 
 const StyledNavbar = styled.div`
   z-index: 10000;
@@ -51,9 +52,23 @@ const StyledNavbar = styled.div`
           background-position: 200% center;
         }
       }
+    }
 
+    p.big {
       @media (max-width: 720px) {
         display: none;
+      }
+    }
+
+    p.small {
+      display: none;
+
+      margin-right: 0;
+
+      @media screen and (min-width:0px) and (max-width:720px) {
+        display: unset;
+        font-size: 2.75rem;
+        margin-top: 0.25rem;
       }
     }
   }
@@ -74,7 +89,12 @@ const StyledNavbar = styled.div`
 
       @media (max-width: 580px) {
         font-size: 1.25rem;
+        margin: 1rem 0.5rem;
       }
+    }
+
+    @media (max-width: 720px) {
+      padding: 1rem 0rem;
     }
   }
 `;
@@ -83,10 +103,18 @@ const Navbar = (props) => {
   return (
     <StyledNavbar>
       <div className="navbar-wrapper">
-        <p>Proomka</p>
+        <NavLink tag={Link} to="/" className="normal">
+          <p className="big">Proomka</p>
+          <p className="small">P</p>
+        </NavLink>
+        
         <div className="navbar-menu">
-          <a href="#about">Co to je?</a>
-          <a href="#docs">Dokumentace</a>
+          <NavLink tag={Link} to="/about" className="normal">
+            Co je to?
+          </NavLink>
+          <NavLink tag={Link} to="/docs" className="normal">
+            Dokumentace
+          </NavLink>
         </div>
       </div>
     </StyledNavbar>
