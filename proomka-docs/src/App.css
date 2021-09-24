@@ -15,6 +15,27 @@
   font-family: Poppins;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--background-color-tertiary);
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--background-color-secondary);
+}
+
 html,
 body {
   scroll-behavior: smooth;
@@ -41,8 +62,4 @@ body {
 .normal {
   text-decoration: none;
   color: unset;
-}
-
-* {
-  transition: 250ms;
 }

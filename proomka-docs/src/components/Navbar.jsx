@@ -65,7 +65,7 @@ const StyledNavbar = styled.div`
 
       margin-right: 0;
 
-      @media screen and (min-width:0px) and (max-width:720px) {
+      @media screen and (min-width: 0px) and (max-width: 720px) {
         display: unset;
         font-size: 2.75rem;
         margin-top: 0.25rem;
@@ -107,11 +107,8 @@ const Navbar = (props) => {
           <p className="big">Proomka</p>
           <p className="small">P</p>
         </NavLink>
-        
+
         <div className="navbar-menu">
-          <NavLink tag={Link} to="/about" className="normal">
-            Co je to?
-          </NavLink>
           <NavLink tag={Link} to="/docs" className="normal">
             Dokumentace
           </NavLink>
