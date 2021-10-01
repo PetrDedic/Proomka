@@ -14,6 +14,8 @@ const StyledAbout = styled.div`
     "image text";
 
   @media (max-width: 720px) {
+    text-align: center;
+
     grid-template-columns: 100%;
     grid-template-rows: auto;
     gap: 2rem;
@@ -46,6 +48,10 @@ const StyledAbout = styled.div`
 
     @media (max-width: 1440px) {
       min-height: 30vh;
+    }
+
+    @media (max-width: 720px) {
+      margin: auto;
     }
   }
 
@@ -108,6 +114,10 @@ const StyledAbout = styled.div`
 
     @media (max-width: 980px) {
       font-size: 3rem;
+    }
+
+    @media (max-width: 720px) {
+      text-align: center;
     }
 
     background: linear-gradient(
