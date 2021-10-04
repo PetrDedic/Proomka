@@ -47,6 +47,13 @@ body {
   overflow: overlay;
 }
 
+@media (max-width: 720px) {
+  html,
+  body {
+    overflow: unset;
+  }
+}
+
 /*html div {
   overflow: hidden;
 }*/

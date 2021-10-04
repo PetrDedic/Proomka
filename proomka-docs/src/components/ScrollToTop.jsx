@@ -8,7 +8,11 @@ function ScrollToTop({ history, children }) {
     // eslint-disable-next-line
     const unlisten = history.listen(() => {
       setTimeout(() => {
-        document.querySelector("body").scrollTo(0, 0);
+        document.querySelector("body").scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "instant",
+        });
       }, 0);
     });
     return () => {

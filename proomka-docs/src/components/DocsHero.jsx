@@ -11,6 +11,8 @@ const StyledHero = styled.div`
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 
+  box-shadow: 0 8px 20px 0px #0000003b;
+
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

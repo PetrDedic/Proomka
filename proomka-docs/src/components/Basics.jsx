@@ -13,7 +13,7 @@ const StyledBasics = styled.div`
 
   h2 {
     padding: 2rem;
-    font-size: 6rem;
+    font-size: 4.5rem;
     font-weight: 700;
     text-align: center;
 
@@ -42,6 +42,7 @@ const StyledBasics = styled.div`
     margin-left: 10%;
     font-size: 4rem;
     font-weight: 700;
+    margin-top: 6rem;
 
     background: linear-gradient(
       45deg,
@@ -80,10 +81,15 @@ const StyledBasics = styled.div`
     &.desc {
       font-style: italic;
       opacity: 0.5;
+      font-size: 1.75rem;
     }
 
     &.short {
       max-width: 50%;
+
+      @media (max-width: 720px) {
+        max-width: 100%;
+      }
     }
   }
 `;
@@ -101,6 +107,15 @@ const ExampleBox = styled.div`
   margin: auto;
 
   background-color: white;
+
+  &.img {
+    background: linear-gradient(
+      45deg,
+      var(--primary),
+      var(--secondary),
+      var(--primary)
+    );
+  }
 `;
 
 const StyledColorExample = styled.div`
@@ -124,6 +139,7 @@ const StyledColorExample = styled.div`
     color: ${(props) => (props.darkText ? "black" : "white")};
     border-radius: 2rem;
     padding: 0.5rem 1.5rem;
+    box-shadow: 0 8px 20px 0px #0000003b;
   }
 `;
 
@@ -136,6 +152,78 @@ const ColorExample = (props) => {
   );
 };
 
+const StyledCard = styled.div`
+  background-color: #f7f7f7;
+  border-radius: 2.5rem;
+  box-shadow: 0 8px 20px 0px #0000003b;
+  transition: 350ms;
+  width: 100%;
+  position: relative;
+  max-width: 300px;
+  height: auto;
+  display: grid;
+  margin: 2rem;
+  float: left;
+  text-align: center;
+
+  &.sharp {
+    border-radius: 0;
+  }
+  &.blank {
+    box-shadow: unset;
+  }
+  &.see {
+    background: linear-gradient(45deg, #0b111bc1, #2b313adf);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    width: 16rem;
+    height: 8rem;
+  }
+  &.see2 {
+    background: linear-gradient(45deg, #0b111b, #2b313a);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    width: 16rem;
+    height: 8rem;
+  }
+  &.see3 {
+    background: linear-gradient(45deg, #0b111b76, #2b313a76);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    width: 16rem;
+    height: 8rem;
+  }
+`;
+
+const StyledCardText = styled.div`
+  max-width: 100%;
+  margin: 1rem;
+  font-size: 1.5rem;
+  height: auto;
+  p {
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+`;
+
+const StyledCardDescription = styled.div`
+  margin: 0.75rem;
+  font-size: 1rem;
+  color: grey;
+  height: auto;
+  p {
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+`;
+
 const Basics = (props) => {
   return (
     <StyledBasics id="basics">
@@ -144,8 +232,8 @@ const Basics = (props) => {
         To nejdůležitější, co tato dokumentace nabízí. Ať už se jedná o
         barvičky, zakulacené hrany nebo celkový mood aplikace...
       </p>
-      <Fade bottom>
-        <h3>Barvy</h3>
+      <h3>Barvy</h3>
+      <Fade bottom className="wrap">
         <p className="short">
           Napříč aplikacemi budete používat spoustu různých barviček. Proto je
           dobré si určit nějaké základní a pojmenovat je.
@@ -166,6 +254,81 @@ const Basics = (props) => {
         <p className="short">
           Barvy se dají dobře využít, například při stylování{" "}
           <span>tlačítek a pozadí</span>.
+        </p>
+      </Fade>
+      <h3>Elevace</h3>
+      <Fade bottom className="wrap">
+        <p className="short">
+          Při použití elevace se jedná o efekt
+          <span> vyzdvyhnutí nad pozadí</span>. Jednoduše použijeme stíny, které
+          do aplikace přidají realičnost a vdechnou komponentě život.
+        </p>
+        <ExampleBox>
+          <StyledCard>
+            <StyledCardText>Hlavička</StyledCardText>
+            <StyledCardDescription>Popisek</StyledCardDescription>
+          </StyledCard>
+          <StyledCard className="blank">
+            <StyledCardText>Hlavička</StyledCardText>
+            <StyledCardDescription>Popisek</StyledCardDescription>
+          </StyledCard>
+        </ExampleBox>
+
+        <p className="desc">box-shadow: 0 8px 20px 0px #0000003b;</p>
+
+        <p className="short">
+          Většinou tento efekt využijeme na pozadí, co se od sebe moc neliší.
+        </p>
+      </Fade>
+      <h3>Zaoblení</h3>
+      <Fade bottom className="wrap">
+        <p className="short">
+          Zaoblené hrany se už používají skoro všude. Důvod? Vypadají přátelsky
+          a příjemně na oko. Proto komponenty zaoblíme.
+        </p>
+        <ExampleBox>
+          <StyledCard>
+            <StyledCardText>Hlavička</StyledCardText>
+          </StyledCard>
+          <StyledCard className="sharp">
+            <StyledCardText>Hlavička</StyledCardText>
+          </StyledCard>
+          <StyledCard className="sharp blank">
+            <StyledCardText>Hlavička</StyledCardText>
+          </StyledCard>
+        </ExampleBox>
+
+        <p className="desc">border-radius: 2.5rem;</p>
+
+        <p className="short">
+          Velikost zaoblení by měla záviset na místě použítí komponenty, většina
+          případů ale použije 2rem až 2.5rem.
+        </p>
+      </Fade>
+      <h3>Průhlednost</h3>
+      <Fade bottom className="wrap">
+        <p className="short">
+          Ačkoliv průhlednost prakticky skoro nikde nevyužijeme, stále se dá
+          využít v designu komponent "přes sebe" a nebo když chceme vidět
+          pozadí. Dobrý příklad je třeba <span>úvodní stránka Proomky</span>.
+        </p>
+        <ExampleBox className="img">
+          <StyledCard className="see2" />
+          <StyledCard className="see" />
+          <StyledCard className="see3" />
+        </ExampleBox>
+
+        <p className="desc">
+          background: linear-gradient(45deg, #0b111b76, #2b313a76);
+          <br />
+          backdrop-filter: blur(4px);
+          <br />
+          -webkit-backdrop-filter: blur(4px);
+        </p>
+
+        <p className="short">
+          Velikost zaoblení by měla záviset na místě použítí komponenty, většina
+          případů ale použije 2rem až 2.5rem.
         </p>
       </Fade>
     </StyledBasics>
