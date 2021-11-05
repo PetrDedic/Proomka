@@ -10,6 +10,7 @@ import CallToAction from "./components/CallToAction";
 import DocsHero from "./components/DocsHero";
 import Basics from "./components/Basics";
 import ScrollToTop from "./components/ScrollToTop";
+import Components from "./components/Components";
 
 const history = createBrowserHistory();
 
@@ -82,6 +83,9 @@ function App() {
               </Wrapper>
               <Fade bottom>
                 <Basics></Basics>
+              </Fade>
+              <Fade bottom>
+                <Components></Components>
               </Fade>
             </Hider>
           </Route>

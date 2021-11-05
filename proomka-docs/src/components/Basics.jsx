@@ -35,6 +35,11 @@ const StyledBasics = styled.div`
         background-position: 200% center;
       }
     }
+
+    @media (max-width: 720px) {
+      font-size: 2.75rem;
+      padding: 1rem;
+    }
   }
 
   h3 {
@@ -62,6 +67,11 @@ const StyledBasics = styled.div`
         background-position: 200% center;
       }
     }
+
+    @media (max-width: 720px) {
+      font-size: 2.75rem;
+      margin-top: 3rem;
+    }
   }
 
   p {
@@ -78,10 +88,19 @@ const StyledBasics = styled.div`
       font-weight: 400;
     }
 
+    @media (max-width: 720px) {
+      font-size: 1.75rem;
+      padding: 2rem 10%;
+    }
+
     &.desc {
       font-style: italic;
       opacity: 0.5;
       font-size: 1.75rem;
+
+      @media (max-width: 720px) {
+        font-size: 1.25rem;
+      }
     }
 
     &.short {
@@ -157,9 +176,9 @@ const StyledCard = styled.div`
   border-radius: 2.5rem;
   box-shadow: 0 8px 20px 0px #0000003b;
   transition: 350ms;
-  width: 100%;
+  width: 16rem;
   position: relative;
-  max-width: 300px;
+  max-width: calc(100% - 4rem);
   height: auto;
   display: grid;
   margin: 2rem;
@@ -283,8 +302,9 @@ const Basics = (props) => {
       <h3>Zaoblení</h3>
       <Fade bottom className="wrap">
         <p className="short">
-          Zaoblené hrany se už používají skoro všude. Důvod? Vypadají přátelsky
-          a příjemně na oko. Proto komponenty zaoblíme.
+          Zaoblené hrany se už používají skoro všude. Důvod? Vypadají{" "}
+          <span>dobře</span> a <span>přátelsky</span> na oko. Proto komponenty
+          zaoblíme.
         </p>
         <ExampleBox>
           <StyledCard>
@@ -324,11 +344,6 @@ const Basics = (props) => {
           backdrop-filter: blur(4px);
           <br />
           -webkit-backdrop-filter: blur(4px);
-        </p>
-
-        <p className="short">
-          Velikost zaoblení by měla záviset na místě použítí komponenty, většina
-          případů ale použije 2rem až 2.5rem.
         </p>
       </Fade>
     </StyledBasics>

@@ -43,7 +43,7 @@ const CallToAction = (props) => {
         window.scrollTo(0, 0);
         setTimeout(() => {
           document.querySelector("body").scrollTo(0, 0);
-        }, 0);
+        }, 0); //behaviour = instant
       }}
     >
       Šup na to
