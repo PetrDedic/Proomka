@@ -77,7 +77,7 @@ const StyledBasics = styled.div`
   p {
     font-size: 2rem;
     color: white;
-    opacity: 0.85;
+    opacity: 0.85 !important;
     font-weight: 200;
 
     width: 80%;
@@ -95,7 +95,7 @@ const StyledBasics = styled.div`
 
     &.desc {
       font-style: italic;
-      opacity: 0.5;
+      opacity: 0.5 !important;
       font-size: 1.75rem;
 
       @media (max-width: 720px) {
