@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="101.3" height="70" version="1.1" viewBox="0 0 26.803 18.521" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-3.9688 -3.9688)">
+  <path x="3.96875" y="3.96875" width="13.229167" height="18.520834" d="m5.9688 3.9688h9.2292a2 2 45 0 1 2 2v14.521a2 2 135 0 1-2 2h-9.2292a2 2 45 0 1-2-2v-14.521a2 2 135 0 1 2-2z" fill="#2b313a"/>
+  <circle cx="6.6146" cy="6.6146" r="1.3229" fill="#fffffe"/>
+  <path x="5.2916665" y="18.520834" width="10.583333" height="2.6458333" d="m6.2917 18.521h8.5833a1 1 45 0 1 1 1v0.64583a1 1 135 0 1-1 1h-8.5833a1 1 45 0 1-1-1v-0.64583a1 1 135 0 1 1-1z" fill="#fffffe" fill-opacity=".40994"/>
+  <g font-family="'Poppins'" font-size="1.4111px" font-weight="bold" stroke-width=".26458">
+   <text x="18.455923" y="20.358805" style="line-height:1.25" xml:space="preserve"><tspan x="18.455923" y="20.358805" font-size="1.4111px" stroke-width=".26458"><tspan fill="#26afe6">&lt;</tspan><tspan fill="#fe3dce">CardMenu</tspan> <tspan fill="#26afe6">/&gt;</tspan></tspan></text>
+   <text x="18.455923" y="7.1296382" style="line-height:1.25" xml:space="preserve"><tspan x="18.455923" y="7.1296382" font-size="1.4111px" stroke-width=".26458"><tspan fill="#26afe6">&lt;</tspan><tspan fill="#fe3dce">CardIcon</tspan> <tspan fill="#26afe6">/&gt;</tspan></tspan></text>
+   <text x="18.455923" y="16.145227" style="line-height:1.25" xml:space="preserve"><tspan x="18.455923" y="16.145227" font-size="1.4111px" stroke-width=".26458"><tspan fill="#26afe6">&lt;</tspan><tspan fill="#fe3dce">CardContent</tspan> <tspan fill="#26afe6">/&gt;</tspan></tspan></text>
+  </g>
+  <path x="5.2916665" y="9.260417" width="10.583333" height="7.9375" d="m6.2917 9.2604h8.5833a1 1 45 0 1 1 1v5.9375a1 1 135 0 1-1 1h-8.5833a1 1 45 0 1-1-1v-5.9375a1 1 135 0 1 1-1z" fill="#fffffe" fill-opacity=".40994"/>
+ </g>
+</svg>
