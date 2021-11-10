@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
-import { Alert, Card, Badge } from "proomkatest";
+import { Alert, Card, Badge, Modal, Switch } from "proomkatest";
+import { useState } from "react";
 
 const StyledBasics = styled.div`
   height: auto;
@@ -129,6 +130,27 @@ const StyledBasics = styled.div`
     margin: 2rem;
     float: left;
   }
+
+  a {
+    background: linear-gradient(
+      45deg,
+      var(--primary),
+      var(--secondary),
+      var(--primary)
+    );
+    background-size: 200% auto;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: shine 5s ease-in-out infinite;
+    @keyframes shine {
+      to {
+        background-position: 200% center;
+      }
+    }
+  }
 `;
 
 const ExampleBox = styled.div`
@@ -153,11 +175,35 @@ const ExampleBox = styled.div`
       var(--primary)
     );
   }
+
+  &.pos {
+    position: relative;
+    min-height: 12rem;
+  }
+
+  .proomka-card {
+    max-width: calc(100% - 4rem);
+    cursor: default;
+  }
+  .proomka-alert {
+    max-width: calc(100% - 4rem);
+  }
+  .proomka-badge {
+    cursor: pointer;
+  }
 `;
 
 const Components = (props) => {
+  const [showModal, setShowModal] = useState(false);
+  const showModalFn = () => {
+    setTimeout(() => {
+      setShowModal(false);
+    }, 500);
+  };
   return (
     <StyledBasics id="components">
+      <div onClick={showModalFn}>{showModal ? <Modal /> : null}</div>
+
       <h2>Komponenty</h2>
       <h3>
         Alert <i className="far fa-bell"></i>
@@ -289,6 +335,73 @@ const Components = (props) => {
           textColor = barva textu ("white")
           <br />
           isScalable = zvětšení při přejetí
+        </p>
+      </Fade>
+      <h3>
+        Modal <i className="fas fa-layer-group"></i>
+      </h3>
+      <Fade bottom className="wrap">
+        <p className="short">
+          Modalová komponenta pro zobrazení potvrzení nebo formulářů. Používá
+          třídy <span>proomka-modal a proomka-modal-content</span>.
+        </p>
+        <ExampleBox className="pos">
+          <Badge
+            top="1rem"
+            right="1rem"
+            textColor="grey"
+            color="#46464648"
+            colorHover="#00000046"
+            textColorHover="black"
+            onClick={() => setShowModal(true)}
+          >
+            <i className="fas fa-layer-group"></i>
+          </Badge>
+        </ExampleBox>
+        <p className="short">
+          Vše uvnitř se zarovná na úplný střed obrazovky a{" "}
+          <span>není scrollovatelný</span>.
+        </p>
+      </Fade>
+      <h3>
+        Switch <i className="fas fa-toggle-on"></i>
+      </h3>
+      <Fade bottom className="wrap">
+        <p className="short">
+          Toggle komponenta pro lehčí práci z formuláři. Používá třídy{" "}
+          <span>
+            proomka-switch, proomka-switch-input, proomka-switch-label a
+            proomka-switch-knob
+          </span>
+          .
+          <br />
+          <br />
+          Design styled-components:{" "}
+          <a href="https://www.instagram.com/frontendjoe/">
+            https://www.instagram.com/frontendjoe/
+          </a>
+        </p>
+        <ExampleBox className="pos">
+          <Card color="#2b313a" width="16rem" height="8rem">
+            <Switch
+              color="#4a5058"
+              knobColorOff="#a1a1a1"
+              knobColor="#1f2225"
+              style={{ placeSelf: "center" }}
+            />
+          </Card>
+        </ExampleBox>
+        <p className="short desc">
+          isChecked = true/false ("true")
+          <br />
+          color = barva pozadí switche ("#4a5058")
+          <br />
+          knobColor = barva posuvného kolečka ("#1f2225")
+          <br />
+          knobColorOff = barva posuvného kolečka při přejetí ("white")
+          <br />
+          fn = funkce OnChange, která se provede při změně (nenastavená catchne
+          error do konzole)
         </p>
       </Fade>
     </StyledBasics>

@@ -81,12 +81,8 @@ function App() {
                   <DocsHero></DocsHero>
                 </Fade>
               </Wrapper>
-              <Fade bottom>
-                <Basics></Basics>
-              </Fade>
-              <Fade bottom>
-                <Components></Components>
-              </Fade>
+              <Basics></Basics>
+              <Components></Components>
             </Hider>
           </Route>
         </Switch>
