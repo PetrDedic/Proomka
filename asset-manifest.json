@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/proomka/static/css/main.4e3afe1b.chunk.css",
-    "main.js": "/proomka/static/js/main.942b5285.chunk.js",
-    "main.js.map": "/proomka/static/js/main.942b5285.chunk.js.map",
-    "runtime-main.js": "/proomka/static/js/runtime-main.1f218e84.js",
-    "runtime-main.js.map": "/proomka/static/js/runtime-main.1f218e84.js.map",
-    "static/js/2.cd7c6c52.chunk.js": "/proomka/static/js/2.cd7c6c52.chunk.js",
-    "static/js/2.cd7c6c52.chunk.js.map": "/proomka/static/js/2.cd7c6c52.chunk.js.map",
-    "static/js/3.b98596b0.chunk.js": "/proomka/static/js/3.b98596b0.chunk.js",
-    "static/js/3.b98596b0.chunk.js.map": "/proomka/static/js/3.b98596b0.chunk.js.map",
-    "index.html": "/proomka/index.html",
-    "static/css/main.4e3afe1b.chunk.css.map": "/proomka/static/css/main.4e3afe1b.chunk.css.map",
-    "static/js/2.cd7c6c52.chunk.js.LICENSE.txt": "/proomka/static/js/2.cd7c6c52.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/proomka/static/media/bg.ddbe3f86.svg",
-    "static/media/card.183032ea.svg": "/proomka/static/media/card.183032ea.svg"
+    "main.css": "/Proomka/static/css/main.0457e5e9.chunk.css",
+    "main.js": "/Proomka/static/js/main.37894c0c.chunk.js",
+    "main.js.map": "/Proomka/static/js/main.37894c0c.chunk.js.map",
+    "runtime-main.js": "/Proomka/static/js/runtime-main.49a53bb9.js",
+    "runtime-main.js.map": "/Proomka/static/js/runtime-main.49a53bb9.js.map",
+    "static/js/2.a1660714.chunk.js": "/Proomka/static/js/2.a1660714.chunk.js",
+    "static/js/2.a1660714.chunk.js.map": "/Proomka/static/js/2.a1660714.chunk.js.map",
+    "static/js/3.b98596b0.chunk.js": "/Proomka/static/js/3.b98596b0.chunk.js",
+    "static/js/3.b98596b0.chunk.js.map": "/Proomka/static/js/3.b98596b0.chunk.js.map",
+    "index.html": "/Proomka/index.html",
+    "static/css/main.0457e5e9.chunk.css.map": "/Proomka/static/css/main.0457e5e9.chunk.css.map",
+    "static/js/2.a1660714.chunk.js.LICENSE.txt": "/Proomka/static/js/2.a1660714.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/Proomka/static/media/bg.ddbe3f86.svg",
+    "static/media/card.183032ea.svg": "/Proomka/static/media/card.183032ea.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.1f218e84.js",
-    "static/js/2.cd7c6c52.chunk.js",
-    "static/css/main.4e3afe1b.chunk.css",
-    "static/js/main.942b5285.chunk.js"
+    "static/js/runtime-main.49a53bb9.js",
+    "static/js/2.a1660714.chunk.js",
+    "static/css/main.0457e5e9.chunk.css",
+    "static/js/main.37894c0c.chunk.js"
   ]
 }
