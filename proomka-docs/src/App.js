@@ -2,8 +2,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import styled from "styled-components";
-import { Route, Router, Switch } from "react-router-dom";
-import { createBrowserHistory } from "history";
+import { Route, BrowserRouter, Switch } from "react-router-dom";
 import About from "./components/About";
 import Fade from "react-reveal/Fade";
 import CallToAction from "./components/CallToAction";
@@ -11,8 +10,6 @@ import DocsHero from "./components/DocsHero";
 import Basics from "./components/Basics";
 import ScrollToTop from "./components/ScrollToTop";
 import Components from "./components/Components";
-
-const history = createBrowserHistory();
 
 const Wrapper = styled.div`
   /*animation: fadeInDown 1s;
@@ -55,7 +52,7 @@ const MaxCenterDiv = styled.div`
 function App() {
   return (
     <div className="App">
-      <Router history={history}>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <ScrollToTop />
         <Navbar></Navbar>
         <Switch>
@@ -86,7 +83,7 @@ function App() {
             </Hider>
           </Route>
         </Switch>
-      </Router>
+      </BrowserRouter>
     </div>
   );
 }

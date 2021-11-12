@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
-import { Alert, Card, Badge, Modal, Switch } from "proomkatest";
+import { Alert, Card, Badge, Modal, Switch, Table } from "proomkatest";
 import { useState } from "react";
 
 const StyledBasics = styled.div`
@@ -83,7 +83,8 @@ const StyledBasics = styled.div`
     }
   }
 
-  p.short {
+  p.short,
+  div.short {
     font-size: 2rem;
     color: white;
     opacity: 0.85 !important;
@@ -119,6 +120,10 @@ const StyledBasics = styled.div`
         max-width: 100%;
       }
     }
+
+    &.table {
+      opacity: 1 !important;
+    }
   }
 
   .proomka-alert {
@@ -129,6 +134,20 @@ const StyledBasics = styled.div`
   .proomka-card {
     margin: 2rem;
     float: left;
+  }
+
+  .proomka-table {
+    background: var(--background-color);
+    padding: 1rem;
+    max-width: 80vw;
+    .proomka-thead-tr {
+      border-radius: 2.5rem;
+      background: linear-gradient(45deg, #0b111bc1, #2b313adf);
+    }
+    opacity: 1 !important;
+    * {
+      opacity: 1 !important;
+    }
   }
 
   a {
@@ -154,7 +173,7 @@ const StyledBasics = styled.div`
 `;
 
 const ExampleBox = styled.div`
-  width: 75%;
+  width: 70%;
   padding: 0 5%;
 
   height: auto;
@@ -200,6 +219,7 @@ const Components = (props) => {
       setShowModal(false);
     }, 500);
   };
+
   return (
     <StyledBasics id="components">
       <div onClick={showModalFn}>{showModal ? <Modal /> : null}</div>
@@ -226,19 +246,65 @@ const Components = (props) => {
             <i className="fas fa-info-circle icon"></i> Tohle je dlouhá zpráva
           </Alert>
         </ExampleBox>
-        <p className="short desc">
-          id = id komponenty
-          <br />
-          height = výška ("4rem")
-          <br />
-          width = šířka ("12rem")
-          <br />
-          color = barva pozadí ("#007784")
-          <br />
-          textColor = barva textu ("white")
-          <br />
-          delay = doba trvání zobrazení v ms, pokud je nastavena ("3000")
-        </p>
+        <div className="short table">
+          <Table
+            textColor="white"
+            headColor="black"
+            cellWidth="10rem"
+            data={[
+              {
+                col1: "id",
+                bool: "✔️",
+              },
+              {
+                col1: "height",
+                length: "✔️",
+              },
+              {
+                col1: "width",
+                length: "✔️",
+              },
+              {
+                col1: "color",
+                color: "✔️",
+              },
+              {
+                col1: "textColor",
+                color: "✔️",
+              },
+              {
+                col1: "delay",
+                duration: "✔️",
+              },
+            ]}
+            column={[
+              {
+                Header: "props",
+                accessor: "col1", // accessor is the "key" in the data
+              },
+              {
+                Header: "bool",
+                accessor: "bool",
+              },
+              {
+                Header: "length",
+                accessor: "length",
+              },
+              {
+                Header: "color",
+                accessor: "color",
+              },
+              {
+                Header: "duration",
+                accessor: "duration",
+              },
+              {
+                Header: "function",
+                accessor: "fun",
+              },
+            ]}
+          />
+        </div>
       </Fade>
       <h3>
         Badge <i className="fas fa-certificate"></i>

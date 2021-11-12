@@ -114,7 +114,7 @@ const StyledBasics = styled.div`
 `;
 
 const ExampleBox = styled.div`
-  width: 75%;
+  width: 70%;
   padding: 0 5%;
 
   height: auto;
