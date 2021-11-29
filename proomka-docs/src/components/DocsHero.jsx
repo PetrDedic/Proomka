@@ -86,6 +86,8 @@ const StyledHero = styled.div`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
+    transform: translate3d(0, 0, 0);
+
     animation: shine 5s ease-in-out infinite;
     @keyframes shine {
       to {

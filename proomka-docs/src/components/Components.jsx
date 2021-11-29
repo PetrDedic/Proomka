@@ -1,6 +1,14 @@
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
-import { Alert, Card, Badge, Modal, Switch, Table } from "proomkatest";
+import {
+  Alert,
+  Card,
+  Badge,
+  Modal,
+  Switch,
+  Table,
+  CardMenu,
+} from "proomkatest";
 import { useState } from "react";
 
 const StyledBasics = styled.div`
@@ -31,6 +39,8 @@ const StyledBasics = styled.div`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
+    transform: translate3d(0, 0, 0);
+
     animation: shine 5s ease-in-out infinite;
     @keyframes shine {
       to {
@@ -45,6 +55,7 @@ const StyledBasics = styled.div`
   }
 
   h3 {
+    scroll-margin: 4rem;
     padding: 1.5rem 0;
     margin-left: 10%;
     font-size: 4rem;
@@ -64,6 +75,49 @@ const StyledBasics = styled.div`
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    transform: translate3d(0, 0, 0);
+
+    animation: shine 5s ease-in-out infinite;
+    @keyframes shine {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    @media (max-width: 720px) {
+      font-size: 2.75rem;
+      margin-top: 3rem;
+    }
+
+    .far,
+    .fas {
+      padding-left: 2rem;
+    }
+  }
+
+  h4 {
+    padding: 1.5rem 0;
+    margin-left: 10%;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(
+      45deg,
+      var(--primary),
+      var(--secondary),
+      var(--primary)
+    );
+    background-size: 200% auto;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transform: translate3d(0, 0, 0);
 
     animation: shine 5s ease-in-out infinite;
     @keyframes shine {
@@ -134,11 +188,23 @@ const StyledBasics = styled.div`
   .proomka-card {
     margin: 2rem;
     float: left;
+    cursor: unset;
+
+    .proomka-badge,
+    .proomka-card-menu {
+      cursor: pointer;
+      place-self: end;
+    }
+  }
+
+  .center-card {
+    display: grid;
   }
 
   .proomka-table {
     background: var(--background-color);
     padding: 1rem;
+    min-width: 80vw;
     max-width: 80vw;
     .proomka-thead-tr {
       border-radius: 2.5rem;
@@ -163,10 +229,36 @@ const StyledBasics = styled.div`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
+    transform: translate3d(0, 0, 0);
+
     animation: shine 5s ease-in-out infinite;
     @keyframes shine {
       to {
         background-position: 200% center;
+      }
+    }
+  }
+
+  .warning {
+    padding: 0 10%;
+
+    p.short.warn {
+      max-width: 70%;
+      text-align: center;
+      padding: 0;
+      margin: 1.5rem auto;
+    }
+
+    .proomka-card {
+      float: unset;
+      margin: unset;
+      flex-direction: column;
+
+      p.big-warn {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #fff;
+        margin: 0.9rem 0 0 2rem;
       }
     }
   }
@@ -225,7 +317,7 @@ const Components = (props) => {
       <div onClick={showModalFn}>{showModal ? <Modal /> : null}</div>
 
       <h2>Komponenty</h2>
-      <h3>
+      <h3 id="alert">
         Alert <i className="far fa-bell"></i>
       </h3>
       <Fade bottom className="wrap">
@@ -252,10 +344,6 @@ const Components = (props) => {
             headColor="black"
             cellWidth="10rem"
             data={[
-              {
-                col1: "id",
-                bool: "✔️",
-              },
               {
                 col1: "height",
                 length: "✔️",
@@ -298,15 +386,11 @@ const Components = (props) => {
                 Header: "duration",
                 accessor: "duration",
               },
-              {
-                Header: "function",
-                accessor: "fun",
-              },
             ]}
           />
         </div>
       </Fade>
-      <h3>
+      <h3 id="badge">
         Badge <i className="fas fa-certificate"></i>
       </h3>
       <Fade bottom className="wrap">
@@ -356,27 +440,67 @@ const Components = (props) => {
             </Badge>
           </Card>
         </ExampleBox>
-        <p className="short desc">
-          id = id komponenty
-          <br />
-          height = výška ("4rem")
-          <br />
-          width = šířka ("12rem")
-          <br />
-          color = barva pozadí ("#007784")
-          <br />
-          textColor = barva textu ("white")
-          <br />
-          colorHover = barva pozadí při přejetí ("#007784")
-          <br />
-          textColorHover = barva textu při přejetí ("white")
-          <br />
-          top = odsazení nahoře ("1rem")
-          <br />
-          right = odsazení vpravo ("1rem")
-        </p>
+        <div className="short table">
+          <Table
+            textColor="white"
+            headColor="black"
+            cellWidth="14rem"
+            data={[
+              {
+                col1: "height",
+                length: "✔️",
+              },
+              {
+                col1: "width",
+                length: "✔️",
+              },
+              {
+                col1: "top",
+                length: "✔️",
+              },
+              {
+                col1: "right",
+                length: "✔️",
+              },
+              {
+                col1: "color",
+                color: "✔️",
+              },
+              {
+                col1: "textColor",
+                color: "✔️",
+              },
+              {
+                col1: "colorHover",
+                color: "✔️",
+              },
+              {
+                col1: "textColorHover",
+                color: "✔️",
+              },
+            ]}
+            column={[
+              {
+                Header: "props",
+                accessor: "col1", // accessor is the "key" in the data
+              },
+              {
+                Header: "bool",
+                accessor: "bool",
+              },
+              {
+                Header: "length",
+                accessor: "length",
+              },
+              {
+                Header: "color",
+                accessor: "color",
+              },
+            ]}
+          />
+        </div>
       </Fade>
-      <h3>
+      <h3 id="card">
         Card <i className="far fa-square"></i>
       </h3>
       <Fade bottom className="wrap">
@@ -384,26 +508,84 @@ const Components = (props) => {
           Slouží jako kontejner k zobrazování obsahu na různé způsoby. Používá
           třídu <span>proomka-card</span>.
         </p>
-        <ExampleBox>
-          <Card color="#007784" width="16rem" height="9rem" isScalable></Card>
-          <Card color="#2b313a" width="16rem" height="9rem" isScalable></Card>
-          <Card color="#fff" width="16rem" height="9rem" isScalable></Card>
-        </ExampleBox>
-        <p className="short desc">
-          id = id komponenty
-          <br />
-          height = výška ("4rem")
-          <br />
-          width = šířka ("12rem")
-          <br />
-          color = barva pozadí ("#007784")
-          <br />
-          textColor = barva textu ("white")
-          <br />
-          isScalable = zvětšení při přejetí
+        <h4>CardMenu</h4>
+        <p className="short">
+          Box, do kterého můžete umístit navigační či akční tlačítka/prvky.
+          Používá třídu <span>proomka-card-menu</span>.
         </p>
+        <ExampleBox>
+          <Card color="#007784" width="24rem" height="28rem">
+            <Badge
+              top="1rem"
+              right="1rem"
+              color="#fff"
+              textColorHover="crimson"
+            >
+              <i className="far fa-heart"></i>
+            </Badge>
+            <CardMenu />
+          </Card>
+          <Card color="#2b313a" width="24rem" height="28rem" isScalable>
+            <Badge
+              top="1rem"
+              right="1rem"
+              color="#fff"
+              textColorHover="crimson"
+            >
+              <i className="far fa-heart"></i>
+            </Badge>
+            <CardMenu />
+          </Card>
+        </ExampleBox>
+        <div className="short table">
+          <Table
+            textColor="white"
+            headColor="black"
+            cellWidth="10rem"
+            data={[
+              {
+                col1: "isScalable",
+                bool: "✔️",
+              },
+              {
+                col1: "height",
+                length: "✔️",
+              },
+              {
+                col1: "width",
+                length: "✔️",
+              },
+              {
+                col1: "color",
+                color: "✔️",
+              },
+              {
+                col1: "textColor",
+                color: "✔️",
+              },
+            ]}
+            column={[
+              {
+                Header: "props",
+                accessor: "col1", // accessor is the "key" in the data
+              },
+              {
+                Header: "bool",
+                accessor: "bool",
+              },
+              {
+                Header: "length",
+                accessor: "length",
+              },
+              {
+                Header: "color",
+                accessor: "color",
+              },
+            ]}
+          />
+        </div>
       </Fade>
-      <h3>
+      <h3 id="modal">
         Modal <i className="fas fa-layer-group"></i>
       </h3>
       <Fade bottom className="wrap">
@@ -429,7 +611,7 @@ const Components = (props) => {
           <span>není scrollovatelný</span>.
         </p>
       </Fade>
-      <h3>
+      <h3 id="switch">
         Switch <i className="fas fa-toggle-on"></i>
       </h3>
       <Fade bottom className="wrap">
@@ -448,7 +630,12 @@ const Components = (props) => {
           </a>
         </p>
         <ExampleBox className="pos">
-          <Card color="#2b313a" width="16rem" height="8rem">
+          <Card
+            color="#2b313a"
+            width="16rem"
+            height="8rem"
+            className="center-card proomka-card"
+          >
             <Switch
               color="#4a5058"
               knobColorOff="#a1a1a1"
@@ -457,18 +644,136 @@ const Components = (props) => {
             />
           </Card>
         </ExampleBox>
-        <p className="short desc">
-          isChecked = true/false ("true")
+        <div className="short table">
+          <Table
+            textColor="white"
+            headColor="black"
+            cellWidth="10rem"
+            data={[
+              {
+                col1: "isChecked",
+                bool: "✔️",
+              },
+              {
+                col1: "color",
+                color: "✔️",
+              },
+              {
+                col1: "knobColor",
+                color: "✔️",
+              },
+              {
+                col1: "knobColorOff",
+                color: "✔️",
+              },
+              {
+                col1: "fn",
+                function: "✔️",
+              },
+            ]}
+            column={[
+              {
+                Header: "props",
+                accessor: "col1", // accessor is the "key" in the data
+              },
+              {
+                Header: "bool",
+                accessor: "bool",
+              },
+              {
+                Header: "color",
+                accessor: "color",
+              },
+              {
+                Header: "function",
+                accessor: "function",
+              },
+            ]}
+          />
+        </div>
+      </Fade>
+      <h3 id="table">
+        Table <i className="fas fa-toggle-on"></i>
+      </h3>
+      <Fade bottom className="wrap">
+        <p className="short">
+          Table komponenta postavená na React Table. Používá třídy{" "}
+          <span>
+            proomka-table, proomka-thead, proomka-thead-tr, proomka-th,
+            proomka-tbody, proomka-tr a proomka-td
+          </span>
+          .
           <br />
-          color = barva pozadí switche ("#4a5058")
           <br />
-          knobColor = barva posuvného kolečka ("#1f2225")
-          <br />
-          knobColorOff = barva posuvného kolečka při přejetí ("white")
-          <br />
-          fn = funkce OnChange, která se provede při změně (nenastavená catchne
-          error do konzole)
+          <a href="https://react-table.tanstack.com/">
+            https://react-table.tanstack.com/
+          </a>
         </p>
+        <div className="warning">
+          <Card color="#d0af5529" width="100%" height="auto">
+            <Badge
+              top="1rem"
+              right="1rem"
+              colorHover="white"
+              color="#ffc21c"
+              textColor="white"
+              textColorHover="#ffc21c"
+            >
+              <i className="fas fa-exclamation"></i>
+            </Badge>
+            <p className="short warn">
+              Je potřeba nastavit props <span>data</span> a <span>column</span>{" "}
+              pro vykreslení tabulky.{" "}
+            </p>
+          </Card>
+        </div>
+        <div className="short table">
+          <Table
+            textColor="white"
+            headColor="black"
+            cellWidth="10rem"
+            data={[
+              {
+                col1: "cellWidth",
+                length: "✔️",
+              },
+              {
+                col1: "cellHeight",
+                length: "✔️",
+              },
+              {
+                col1: "color",
+                color: "✔️",
+              },
+              {
+                col1: "textColor",
+                color: "✔️",
+              },
+              {
+                col1: "evenColor",
+                color: "✔️",
+              },
+              {
+                col1: "headColor",
+                color: "✔️",
+              },
+            ]}
+            column={[
+              {
+                Header: "props",
+                accessor: "col1", // accessor is the "key" in the data
+              },
+              {
+                Header: "length",
+                accessor: "length",
+              },
+              {
+                Header: "color",
+                accessor: "color",
+              },
+            ]}
+          />
+        </div>
       </Fade>
     </StyledBasics>
   );

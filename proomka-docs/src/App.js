@@ -10,6 +10,7 @@ import DocsHero from "./components/DocsHero";
 import Basics from "./components/Basics";
 import ScrollToTop from "./components/ScrollToTop";
 import Components from "./components/Components";
+import NavigationMenu from "./components/NavigationMenu";
 
 const Wrapper = styled.div`
   /*animation: fadeInDown 1s;
@@ -72,6 +73,7 @@ function App() {
             </Wrapper>
           </Route>
           <Route exact path="/docs">
+            <NavigationMenu />
             <Hider className="overflow">
               <Wrapper key={Math.random()} topPadding>
                 <Fade bottom className="overflow">

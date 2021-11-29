@@ -29,6 +29,8 @@ const StyledBasics = styled.div`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
+    transform: translate3d(0, 0, 0);
+
     animation: shine 5s ease-in-out infinite;
     @keyframes shine {
       to {
@@ -43,6 +45,7 @@ const StyledBasics = styled.div`
   }
 
   h3 {
+    scroll-margin: 4rem;
     padding: 1.5rem 0;
     margin-left: 10%;
     font-size: 4rem;
@@ -60,6 +63,8 @@ const StyledBasics = styled.div`
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    transform: translate3d(0, 0, 0);
 
     animation: shine 5s ease-in-out infinite;
     @keyframes shine {
@@ -251,7 +256,7 @@ const Basics = (props) => {
         To nejdůležitější, co tato dokumentace nabízí. Ať už se jedná o
         barvičky, zakulacené hrany nebo celkový mood aplikace...
       </p>
-      <h3>Barvy</h3>
+      <h3 id="colors">Barvy</h3>
       <Fade bottom className="wrap">
         <p className="short">
           Napříč aplikacemi budete používat spoustu různých barviček. Proto je
@@ -275,7 +280,7 @@ const Basics = (props) => {
           <span>tlačítek a pozadí</span>.
         </p>
       </Fade>
-      <h3>Elevace</h3>
+      <h3 id="elevation">Elevace</h3>
       <Fade bottom className="wrap">
         <p className="short">
           Při použití elevace se jedná o efekt
@@ -299,7 +304,7 @@ const Basics = (props) => {
           Většinou tento efekt využijeme na pozadí, co se od sebe moc neliší.
         </p>
       </Fade>
-      <h3>Zaoblení</h3>
+      <h3 id="radius">Zaoblení</h3>
       <Fade bottom className="wrap">
         <p className="short">
           Zaoblené hrany se už používají skoro všude. Důvod? Vypadají{" "}
@@ -325,7 +330,7 @@ const Basics = (props) => {
           případů ale použije 2rem až 2.5rem.
         </p>
       </Fade>
-      <h3>Průhlednost</h3>
+      <h3 id="see">Průhlednost</h3>
       <Fade bottom className="wrap">
         <p className="short">
           Ačkoliv průhlednost prakticky skoro nikde nevyužijeme, stále se dá

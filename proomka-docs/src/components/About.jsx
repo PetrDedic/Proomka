@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import card from "../card.svg";
+import card from "../card-no-text.svg";
 
 const StyledAbout = styled.div`
   width: 85%;
@@ -98,6 +98,8 @@ const StyledAbout = styled.div`
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    transform: translate3d(0, 0, 0);
 
     animation: shine 5s ease-in-out infinite;
     @keyframes shine {
