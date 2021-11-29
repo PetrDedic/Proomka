@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/Proomka/static/css/main.0457e5e9.chunk.css",
-    "main.js": "/Proomka/static/js/main.c4ef2c49.chunk.js",
-    "main.js.map": "/Proomka/static/js/main.c4ef2c49.chunk.js.map",
-    "runtime-main.js": "/Proomka/static/js/runtime-main.35e102e4.js",
-    "runtime-main.js.map": "/Proomka/static/js/runtime-main.35e102e4.js.map",
-    "static/js/2.11a1c48e.chunk.js": "/Proomka/static/js/2.11a1c48e.chunk.js",
-    "static/js/2.11a1c48e.chunk.js.map": "/Proomka/static/js/2.11a1c48e.chunk.js.map",
-    "static/js/3.56c7493a.chunk.js": "/Proomka/static/js/3.56c7493a.chunk.js",
-    "static/js/3.56c7493a.chunk.js.map": "/Proomka/static/js/3.56c7493a.chunk.js.map",
+    "main.css": "/Proomka/static/css/main.014a51fa.chunk.css",
+    "main.js": "/Proomka/static/js/main.f0b0eb2b.chunk.js",
+    "main.js.map": "/Proomka/static/js/main.f0b0eb2b.chunk.js.map",
+    "runtime-main.js": "/Proomka/static/js/runtime-main.a09e9039.js",
+    "runtime-main.js.map": "/Proomka/static/js/runtime-main.a09e9039.js.map",
+    "static/js/2.4476d29d.chunk.js": "/Proomka/static/js/2.4476d29d.chunk.js",
+    "static/js/2.4476d29d.chunk.js.map": "/Proomka/static/js/2.4476d29d.chunk.js.map",
+    "static/js/3.0d3b8218.chunk.js": "/Proomka/static/js/3.0d3b8218.chunk.js",
+    "static/js/3.0d3b8218.chunk.js.map": "/Proomka/static/js/3.0d3b8218.chunk.js.map",
     "index.html": "/Proomka/index.html",
-    "static/css/main.0457e5e9.chunk.css.map": "/Proomka/static/css/main.0457e5e9.chunk.css.map",
-    "static/js/2.11a1c48e.chunk.js.LICENSE.txt": "/Proomka/static/js/2.11a1c48e.chunk.js.LICENSE.txt",
+    "static/css/main.014a51fa.chunk.css.map": "/Proomka/static/css/main.014a51fa.chunk.css.map",
+    "static/js/2.4476d29d.chunk.js.LICENSE.txt": "/Proomka/static/js/2.4476d29d.chunk.js.LICENSE.txt",
     "static/media/App.css": "/Proomka/static/media/bg.ddbe3f86.svg",
-    "static/media/card.183032ea.svg": "/Proomka/static/media/card.183032ea.svg"
+    "static/media/card-no-text.cd68658b.svg": "/Proomka/static/media/card-no-text.cd68658b.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.35e102e4.js",
-    "static/js/2.11a1c48e.chunk.js",
-    "static/css/main.0457e5e9.chunk.css",
-    "static/js/main.c4ef2c49.chunk.js"
+    "static/js/runtime-main.a09e9039.js",
+    "static/js/2.4476d29d.chunk.js",
+    "static/css/main.014a51fa.chunk.css",
+    "static/js/main.f0b0eb2b.chunk.js"
   ]
 }
