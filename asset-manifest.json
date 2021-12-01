@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Proomka/static/css/main.014a51fa.chunk.css",
-    "main.js": "/Proomka/static/js/main.62093a51.chunk.js",
-    "main.js.map": "/Proomka/static/js/main.62093a51.chunk.js.map",
+    "main.js": "/Proomka/static/js/main.4d04b10c.chunk.js",
+    "main.js.map": "/Proomka/static/js/main.4d04b10c.chunk.js.map",
     "runtime-main.js": "/Proomka/static/js/runtime-main.d9477c3f.js",
     "runtime-main.js.map": "/Proomka/static/js/runtime-main.d9477c3f.js.map",
     "static/js/2.6b05b852.chunk.js": "/Proomka/static/js/2.6b05b852.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.d9477c3f.js",
     "static/js/2.6b05b852.chunk.js",
     "static/css/main.014a51fa.chunk.css",
-    "static/js/main.62093a51.chunk.js"
+    "static/js/main.4d04b10c.chunk.js"
   ]
 }
