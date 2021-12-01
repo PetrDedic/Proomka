@@ -4,7 +4,6 @@ import Hero from "./components/Hero";
 import styled from "styled-components";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 import About from "./components/About";
-import Fade from "react-reveal/Fade";
 import CallToAction from "./components/CallToAction";
 import DocsHero from "./components/DocsHero";
 import Basics from "./components/Basics";
@@ -59,26 +58,18 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Wrapper key={Math.random()} style={{ overflow: "hidden" }}>
-              <Fade bottom>
-                <Hero></Hero>
-              </Fade>
-              <Fade bottom>
-                <About></About>
-              </Fade>
-              <Fade bottom>
-                <MaxCenterDiv>
-                  <CallToAction bottomMargin />
-                </MaxCenterDiv>
-              </Fade>
+              <Hero></Hero>
+              <About></About>
+              <MaxCenterDiv>
+                <CallToAction bottomMargin />
+              </MaxCenterDiv>
             </Wrapper>
           </Route>
           <Route exact path="/docs">
             <NavigationMenu />
             <Hider className="overflow">
               <Wrapper key={Math.random()} topPadding>
-                <Fade bottom className="overflow">
-                  <DocsHero></DocsHero>
-                </Fade>
+                <DocsHero></DocsHero>
               </Wrapper>
               <Basics></Basics>
               <Components></Components>

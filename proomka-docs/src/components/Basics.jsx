@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Fade from "react-reveal/Fade";
 
 const StyledBasics = styled.div`
   height: auto;
@@ -257,7 +256,7 @@ const Basics = (props) => {
         barvičky, zakulacené hrany nebo celkový mood aplikace...
       </p>
       <h3 id="colors">Barvy</h3>
-      <Fade bottom className="wrap">
+      <div className="wrap">
         <p className="short">
           Napříč aplikacemi budete používat spoustu různých barviček. Proto je
           dobré si určit nějaké základní a pojmenovat je.
@@ -279,9 +278,9 @@ const Basics = (props) => {
           Barvy se dají dobře využít, například při stylování{" "}
           <span>tlačítek a pozadí</span>.
         </p>
-      </Fade>
+      </div>
       <h3 id="elevation">Elevace</h3>
-      <Fade bottom className="wrap">
+      <div className="wrap">
         <p className="short">
           Při použití elevace se jedná o efekt
           <span> vyzdvyhnutí nad pozadí</span>. Jednoduše použijeme stíny, které
@@ -303,9 +302,9 @@ const Basics = (props) => {
         <p className="short">
           Většinou tento efekt využijeme na pozadí, co se od sebe moc neliší.
         </p>
-      </Fade>
+      </div>
       <h3 id="radius">Zaoblení</h3>
-      <Fade bottom className="wrap">
+      <div className="wrap">
         <p className="short">
           Zaoblené hrany se už používají skoro všude. Důvod? Vypadají{" "}
           <span>dobře</span> a <span>přátelsky</span> na oko. Proto komponenty
@@ -329,9 +328,9 @@ const Basics = (props) => {
           Velikost zaoblení by měla záviset na místě použítí komponenty, většina
           případů ale použije 2rem až 2.5rem.
         </p>
-      </Fade>
+      </div>
       <h3 id="see">Průhlednost</h3>
-      <Fade bottom className="wrap">
+      <div className="wrap">
         <p className="short">
           Ačkoliv průhlednost prakticky skoro nikde nevyužijeme, stále se dá
           využít v designu komponent "přes sebe" a nebo když chceme vidět
@@ -350,7 +349,7 @@ const Basics = (props) => {
           <br />
           -webkit-backdrop-filter: blur(4px);
         </p>
-      </Fade>
+      </div>
     </StyledBasics>
   );
 };

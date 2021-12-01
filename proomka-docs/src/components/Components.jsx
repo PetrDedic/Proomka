@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Fade from "react-reveal/Fade";
 import {
   Alert,
   Card,
@@ -320,7 +319,7 @@ const Components = (props) => {
       <h3 id="alert">
         Alert <i className="far fa-bell"></i>
       </h3>
-      <Fade bottom className="wrap">
+      <div className="wrap">
         <p className="short">
           Jednoduchý alert box sloužící k zobrazení stavové zprávy. Používá
           třídu <span>proomka-alert</span>.
@@ -389,11 +388,11 @@ const Components = (props) => {
             ]}
           />
         </div>
-      </Fade>
+      </div>
       <h3 id="badge">
         Badge <i className="fas fa-certificate"></i>
       </h3>
-      <Fade bottom className="wrap">
+      <div className="wrap">
         <p className="short">
           Komponenta pro viditelné zobrazení a upozornění na nějakou vlastnost.
           Používá třídu <span>proomka-badge</span>.
@@ -499,11 +498,11 @@ const Components = (props) => {
             ]}
           />
         </div>
-      </Fade>
+      </div>
       <h3 id="card">
         Card <i className="far fa-square"></i>
       </h3>
-      <Fade bottom className="wrap">
+      <div className="wrap">
         <p className="short">
           Slouží jako kontejner k zobrazování obsahu na různé způsoby. Používá
           třídu <span>proomka-card</span>.
@@ -584,11 +583,11 @@ const Components = (props) => {
             ]}
           />
         </div>
-      </Fade>
+      </div>
       <h3 id="modal">
         Modal <i className="fas fa-layer-group"></i>
       </h3>
-      <Fade bottom className="wrap">
+      <div className="wrap">
         <p className="short">
           Modalová komponenta pro zobrazení potvrzení nebo formulářů. Používá
           třídy <span>proomka-modal a proomka-modal-content</span>.
@@ -610,11 +609,11 @@ const Components = (props) => {
           Vše uvnitř se zarovná na úplný střed obrazovky a{" "}
           <span>není scrollovatelný</span>.
         </p>
-      </Fade>
+      </div>
       <h3 id="switch">
         Switch <i className="fas fa-toggle-on"></i>
       </h3>
-      <Fade bottom className="wrap">
+      <div className="wrap">
         <p className="short">
           Toggle komponenta pro lehčí práci z formuláři. Používá třídy{" "}
           <span>
@@ -691,11 +690,11 @@ const Components = (props) => {
             ]}
           />
         </div>
-      </Fade>
+      </div>
       <h3 id="table">
         Table <i className="fas fa-toggle-on"></i>
       </h3>
-      <Fade bottom className="wrap">
+      <div className="wrap">
         <p className="short">
           Table komponenta postavená na React Table. Používá třídy{" "}
           <span>
@@ -774,7 +773,7 @@ const Components = (props) => {
             ]}
           />
         </div>
-      </Fade>
+      </div>
     </StyledBasics>
   );
 };
