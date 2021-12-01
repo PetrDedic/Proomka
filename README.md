@@ -9,3 +9,7 @@
 # Proomka
 
 https://petrdedic.github.io/Proomka/
+
+## Proomka Library
+
+https://www.npmjs.com/package/proomkatest
