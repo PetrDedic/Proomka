@@ -23,8 +23,8 @@ const Wrapper = styled.div`
       opacity: 1;
       transform: translateY(0);
     }
-  }
-*/
+  }*/
+
   height: auto;
 
   width: 80%;
